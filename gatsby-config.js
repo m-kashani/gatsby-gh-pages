@@ -41,7 +41,7 @@ module.exports = {
         branch: `master`,
         // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: `*.md`,
-        local: `${__dirname}/docs/ArticleA`
+        local: `${__dirname}/docs/goli`
       }
     },    
     {
@@ -53,7 +53,7 @@ module.exports = {
         branch: `master`,
         // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: `*.md`,
-        local: `${__dirname}/docs/ArticleB`
+        local: `${__dirname}/docs/qholi`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

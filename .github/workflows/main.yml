@@ -7,14 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:       
       - name: Event Information
-        run: | echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+        run: | 
+        echo "It is working"
 
-      - name: Build & Deploy
-        if: github.event.action == 'ping'
+      #   run: | echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+
+      # - name: Build & Deploy
+      #   if: github.event.action == 'ping'
         
-      - uses: actions/checkout@v1 #TODO?
-      - uses: enriikke/gatsby-gh-pages-action@v2.1.1 #v2.3.1
-        with:
-          access-token: ${{ secrets.PTEST }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths #inside the gatsby-config.js
+      # - uses: actions/checkout@v1 #TODO?
+      # - uses: enriikke/gatsby-gh-pages-action@v2.1.1 #v2.3.1
+      #   with:
+      #     access-token: ${{ secrets.PTEST }}
+      #     deploy-branch: gh-pages
+      #     gatsby-args: --prefix-paths #inside the gatsby-config.js
