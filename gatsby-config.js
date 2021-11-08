@@ -32,6 +32,30 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `actions-remote-dispatch-a`,
+        remote: `https://github.com/m-kashani/actions-remote-dispatch-a.git`,
+        // Optionally supply a branch. If none supplied, you'll get the default branch.
+        branch: `master`,
+        // Tailor which files get imported eg. import the docs folder from a codebase.
+        patterns: `*.md`,
+        local: `${__dirname}/docs/ArticleA`
+      }
+    },    
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `actions-remote-dispatch-b`,
+        remote: `https://github.com/m-kashani/actions-remote-dispatch-b.git`,
+        // Optionally supply a branch. If none supplied, you'll get the default branch.
+        branch: `master`,
+        // Tailor which files get imported eg. import the docs folder from a codebase.
+        patterns: `*.md`,
+        local: `${__dirname}/docs/ArticleB`
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
