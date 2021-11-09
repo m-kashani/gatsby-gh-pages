@@ -41,7 +41,7 @@ module.exports = {
         branch: `master`,
         // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: `*.md`,
-        local: `${__dirname}/docs/goli`
+        local: `${__dirname}/docs/a_Article`
       }
     },    
     {
@@ -53,11 +53,25 @@ module.exports = {
         branch: `master`,
         // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: `*.md`,
-        local: `${__dirname}/docs/qholi`
+        local: `${__dirname}/docs/b_Article`
       }
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
   ],
 }
+
+
+
